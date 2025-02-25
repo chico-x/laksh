@@ -1,4 +1,8 @@
+#remove the sleep commands if you think it's unnecessary
+#i just added it for better debugging of the script
 
+#in case you didn't read the README.md
+#Do  replace the default  values  on "your_zero-tier_address" and [my_api_key_laksh] 
 
 #!/bin/bash
 
@@ -20,7 +24,7 @@ curl -s https://install.zerotier.com/ | bash
 # Join ZeroTier network
 echo "Joining ZeroTier network..."
 sleep 2
-zerotier-cli join 565799d8f6bca37c
+zerotier-cli join "your_zero-tier_address"
 
 # Install Python dependencies
 echo "Installing Python dependencies..."
@@ -35,7 +39,7 @@ adduser --disabled-password --gecos "" cowrie
 # Switch to user 'cowrie' and execute commands
 echo "Switching to user 'cowrie'..."
 sleep 2
-sudo -u cowrie bash <<EOF
+su cowrie <<EOF
 cd /home/cowrie
 
 # Clone honeypot
