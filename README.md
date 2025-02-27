@@ -9,8 +9,7 @@ feel free to use it or modify according to your use case.
 
 # How to run the script?
 
-Before you run the script, make sure to change the default values of "your_zero-tier_address" and [my_api_key_laksh]
-
+Before you run the script, make sure to change the default values of "your_zero-tier_address" , bot_token and chat_id
 if you don't know what to enter in place of these placeholder values, read more to know.
 
 After doing that just run the below command  in your linux terminal
