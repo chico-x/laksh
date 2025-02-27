@@ -71,8 +71,8 @@ sleep 2
 CONFIG_FILE="cowrie.cfg.dist"
 
 # Define new values
-NEW_BOT_TOKEN="123456:ABCDEFghijklMNOpQRstuVWxyZ"
-NEW_CHAT_ID="987654321"
+NEW_BOT_TOKEN="7212722371:AAE0vrP7AfY56dr164YY3QjyDBTBH39dZ0Q"
+NEW_CHAT_ID="5486965848"
 
 # Enable Telegram alerts
 sed -i 's/enabled = false/enabled = true/' "$CONFIG_FILE"
