@@ -26,9 +26,9 @@ since this script expects you to run this inside a ubuntu docker in a simulated 
 its neccessary to join into a public zero-tier address to make your honeypot vulnerable and easily accessible (since thats the whole point of having a honeypot)
 
 
-# What is [my_api_key_laksh]?
+# What is bot_token and chat_id?
 
-Add your telegram bot api key inside those [ ] brackets after removing the place holder text inside it (my_api_key_laksh)
+Add your telegram bot token key in the bot_token line and your chat id in chat_id 
 This is neccessary so that cowrie can send you  log messages  and you can easily view 
 The log messages after you receive them in your telegram messenger through your telegram bot api. 
 
