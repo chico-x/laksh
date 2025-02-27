@@ -38,7 +38,7 @@ fi
  SAVED_KEY=$(cat "$API_KEY_FILE")
 
 #Appending the zero-tier network address
-$net_addr = network_address.txt
+net_addr = net.txt
 #checking for previously saved address
 if [[ -f "$net_addr" ]]; then
     # Display the currently saved zero-tier address (optional: you can choose not to show it)
@@ -88,8 +88,10 @@ curl -s https://install.zerotier.com/ | bash
 
 # Join ZeroTier network
 echo "Joining ZeroTier network..."
-sleep 2
+systemctl restart zerotier-one
+sleep 5
 zerotier-cli join "$net"
+
 
 # Install Python dependencies
 echo "Installing Python dependencies..."
@@ -135,7 +137,7 @@ pip install --upgrade -r requirements.txt
 cd etc
 echo "Editing config file to append the API key..."
 sleep 2
-sed -i '/telegram[[:space:]]\+api/ s/\[[[:space:]]*\]/[$SAVED_KEY]/' cowrie.cfg.dist || { echo "Failed to update API key"; exit 1; }
+sed -i "/telegram[[:space:]]\+api/ s/\[[[:space:]]*\]/[$SAVED_KEY]/" cowrie.cfg.dist || { echo "Failed to update API key"; exit 1; }
 echo "API key successfully appended!"
 sleep 1
 
