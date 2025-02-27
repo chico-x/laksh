@@ -71,17 +71,17 @@ sleep 2
 CONFIG_FILE="cowrie.cfg.dist"
 
 # Define new values
-NEW_BOT_TOKEN="7212722371:AAE0vrP7AfY56dr164YY3QjyDBTBH39dZ0Q"
-NEW_CHAT_ID="5486965848"
+BOT_TOKEN="7212722371:AAE0vrP7AfY56dr164YY3QjyDBTBH39dZ0Q"
+CHAT_ID="5486965848"
 
 # Enable Telegram alerts
 sed -i 's/enabled = false/enabled = true/' "$CONFIG_FILE"
 
 # Update bot_token
-sed -i "s|bot_token = .*|bot_token = $NEW_BOT_TOKEN|" "$CONFIG_FILE"
+sed -i "s|bot_token = .*|bot_token = $BOT_TOKEN|" "$CONFIG_FILE"
 
 # Update chat_id
-sed -i "s|chat_id = .*|chat_id = $NEW_CHAT_ID|" "$CONFIG_FILE"
+sed -i "s|chat_id = .*|chat_id = $CHAT_ID|" "$CONFIG_FILE"
 
 echo "Updated $CONFIG_FILE successfully!"
 sleep 2
