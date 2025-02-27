@@ -1,9 +1,6 @@
 #remove the sleep commands if you think it's unnecessary
 #i just added it for better debugging of the script
 
-#in case you didn't read the README.md
-#Do  replace the default  values  on "your_zero-tier_address" and [my_api_key_laksh] 
-
 #!/bin/bash
 
 # Update package list
@@ -70,9 +67,24 @@ pip install --upgrade -r requirements.txt
 cd etc
 echo "Editing config file to append the API key..."
 sleep 2
-sed -i '/telegram[[:space:]]\+api/ s/\[[[:space:]]*\]/[my_api_key_laksh]/' cowrie.cfg.dist || { echo "Failed to update API key"; exit 1; }
-echo "API key successfully appended!"
-sleep 1
+
+CONFIG_FILE="cowrie.cfg.dist"
+
+# Define new values
+NEW_BOT_TOKEN="7212722371:AAE0vrP7AfY56dr164YY3QjyDBTBH39dZ0Q"
+NEW_CHAT_ID="5486965848"
+
+# Enable Telegram alerts
+sed -i 's/enabled = false/enabled = true/' "$CONFIG_FILE"
+
+# Update bot_token
+sed -i "s|bot_token = .*|bot_token = $NEW_BOT_TOKEN|" "$CONFIG_FILE"
+
+# Update chat_id
+sed -i "s|chat_id = .*|chat_id = $NEW_CHAT_ID|" "$CONFIG_FILE"
+
+echo "Updated $CONFIG_FILE successfully!"
+sleep 2
 
 # Copy config file
 cd ..
