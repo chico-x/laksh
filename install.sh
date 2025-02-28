@@ -22,7 +22,7 @@ curl -s https://install.zerotier.com/ | bash
 # Join ZeroTier network
 echo "Joining ZeroTier network..."
 sleep 2
-zerotier-cli join "your_zero-tier_address"
+zerotier-cli join  db64858fed998184
 
 # Install Python dependencies
 echo "Installing Python dependencies..."
