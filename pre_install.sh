@@ -27,4 +27,5 @@ zerotier-cli join  db64858fed998184
 # test network connection
 echo "displaying network config...."
 sleep 2
+apt install net-tools
 ifconfig
