@@ -42,10 +42,10 @@ cd /home/cowrie
 # Clone honeypot
 echo "Cloning honeypot repository..."
 sleep 2
-git clone https://github.com/cowrie/cowrie.git
+git clone https://github.com/athuldev4721/laksh_cowrie.git
 
 # Set up virtual environment
-cd cowrie
+cd laksh_cowrie
 echo "Setting up virtual environment..."
 sleep 2
 virtualenv cowrie-env
