@@ -16,6 +16,7 @@ apt-get upgrade -y
 # Install ZeroTier
 echo "Installing ZeroTier..."
 sleep 2
+apt install curl -y
 curl -s https://install.zerotier.com/ | bash
 
 # Join ZeroTier network
