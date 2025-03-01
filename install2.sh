@@ -1,18 +1,3 @@
-
-# Install Python dependencies
-echo "Installing Python dependencies..."
-sleep 2
-apt-get install -y git python3-virtualenv libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind virtualenv
-
-# Add user 'cowrie' with a disabled password
-echo "Adding user 'cowrie'..."
-sleep 2
-adduser --disabled-password --gecos "" cowrie
-
-# Switch to user 'cowrie' and execute commands
-echo "Switching to user 'cowrie'..."
-sleep 2
-su cowrie <<EOF
 cd /home/cowrie
 
 # Clone honeypot
@@ -53,7 +38,4 @@ bin/cowrie start
 echo "Setting up live logs..."
 sleep 2
 tail -f ./var/log/cowrie/cowrie.log &
-
-EOF
-
 echo "Your honeypot environment has successfully started with live logs!"
