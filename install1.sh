@@ -22,7 +22,7 @@ curl -s https://install.zerotier.com/ | bash
 # Join ZeroTier network
 echo "Joining ZeroTier network..."
 sleep 2
-zerotier-cli join  db64858fed998184
+zerotier-cli join  48d6023c468b98e3
 
 # test network connection
 echo "displaying network config...."
