@@ -37,7 +37,7 @@ apt-get install -y git python3-virtualenv libssl-dev libffi-dev build-essential 
 # Add user 'cowrie' with a disabled password
 echo "Adding user 'cowrie'..."
 sleep 2
-adduser --disabled-password --gecos "" cowrie
+adduser --disabled-password  cowrie
 
 # Switch to user 'cowrie' and execute commands
 echo "Switching to user 'cowrie'..."
